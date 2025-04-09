@@ -1,5 +1,5 @@
 ---
 title: Welcome to my blog
-title: 初见vvvvv
+title: 初见vv
 ---
 
