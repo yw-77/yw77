@@ -4,22 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>简历</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
          body {
         font-family: sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #e2e1e4; /* 备用颜色 */
+        background-color: #f4f4f4;/* 备用颜色 */
         color: #333;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-       /* background-image: url('./images/wallhaven-6dzvel.jpg');  替换为你的图片路径 */
-        background-repeat: no-repeat; /* 不平铺 */
-        background-size: contain; /*  缩放以包含 */
-        background-position: center center;  /*居中显示 */
+        
         }
         .profile-card {
             background-color: #fff;
@@ -27,6 +25,9 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 50%; /* 或你希望的宽度 */
+            margin: 20px auto; /* 让 profile-card 在 body 中水平居中，并添加上下外边距 */
+            max-width: 600px; /* 设置最大宽度 */
         }
         .profile-image {
             width: 120px;
@@ -53,7 +54,7 @@
             font-size: 1.2em; /* 调整图标大小 */
         }
         .contact-info a:hover {
-            color: #007bff; /* 鼠标悬停效果 */
+            color: var(--hover-color); /* 鼠标悬停效果 */
         }
         .skills {
         margin-top: 30px;
@@ -63,7 +64,20 @@
         .skills h2 {
         font-size: 1.8em;
         margin-bottom: 10px;
-        text-align: center; /* 技能标题居中 */
+        text-align: left; /* 技能标题居中 */
+        }
+        .skills-list {
+        list-style: none; /* 移除默认的列表符号 */
+        padding: 20;
+        display: flex;
+        flex-wrap: wrap; /* 允许换行 */
+        justify-self: flex-start;
+        }
+        .skills-list li {
+            width: calc(50% - 10px); /* 每个列表项占据50%的宽度，减去间距 */
+            margin-bottom: 8px;
+            padding-right: 10px;
+            box-sizing: border-box; /* 包含 padding 和 border 在元素尺寸内 */
         }
 
         .skills ul {
@@ -74,38 +88,67 @@
         .skills li {
         margin-bottom: 8px;
         }
+
+        footer {
+          
+        background-color: #ffffff; /* 设置底部栏的背景颜色 */
+        color: #b0b0b0; /* 设置文字颜色 */
+        padding: 1em 1; /* 设置上下内边距 */
+        text-align: center; /* 文字居中 */
+        width: 100%; /* 占据屏幕的整个宽度 */
+        box-sizing: border-box; /* 包含 padding 和 border 在元素尺寸内 */
+        font-size: 0.8em; /* 缩小字体大小 */
+    }
+
+    footer a {
+        color: #b0b0b0; /* 设置链接颜色 */
+        text-decoration: none; /* 移除下划线 */
+        margin: 0 0.5em; /* 设置链接之间的间距 */
+    }
+
+  
     </style>
 </head>
 <body>
     <div class="profile-card">
         <img src="./images/1.jpg" alt="我的照片" class="profile-image">
-        <h1 class="name">小帅|25|180|75</h1>
-        <h1 class="name">喜欢的女生：👉<a href="https://baike.baidu.com/link?url=PF_P86dpnDlLBzsQcK5PanRSefzkQLpHjGXiv52ruV2w8wz1hEyHK2ZO63mWOnBp3ooM0VgewLiGggq9pl8EfK">小美</a></h1>
+        <h1 class="name">小帅</h1><a href="https://baike.baidu.com/item/iu/12013444?fromtitle=%E6%9D%8E%E7%9F%A5%E6%81%A9&fromid=74308">小美</a></h1>
         <p class="bio">前进！前进！前进进！！</p>
         <p class="bio">毕业于中国皇家理工大学计算机系</p>
 
-        <div class="contact-info">
-            <a href="https://yw-77.github.io/yw77/" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="./images/12.jpg" target="_blank"><i class="fab fa-weixin"></i></a>
-            <a href="https://x.com/bear_yuwei" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>
+         
+       
 <section class="skills">
             <h2>技能</h2>
-            <ul>
-                <li>精通Java、C++、C#、Python语言<br>掌握spring、spring boot、mybatis使用<br>了解vue、node.js、.NET<br>熟练掌握office使用，精通vlookup函数</li>
+            <ul ><!--class="skills-list"-->
+                <li>精通Java、C++、C#、Python语言、掌握spring、spring boot、mybatis使用、了解vue、node.js、.NET、熟练掌握office使用，精通vlookup函数</li>
                 <li>擅长网络安全、网络配置、软路由、vpn等技术</li>
-                <li>掌握linux、shell脚本、apache、nginx、<br>tomcat等系统运维、网络运维</li>
+                <li>掌握linux、shell脚本、apache、nginx、tomcat等系统运维、网络运维</li>
                 <li>掌握MySQL、Access、Navicat等数据库及管理工具</li>
                 <li>精通剪映、Pr、Ps、Au等工具</li>
                 <li>精通AI工具的使用，包括但不限于Chat Gpt、deep seek等</li>
                 <li>爱好书法、羽毛球、喜欢研究东西</li>
-                <li>熟练彻底卸载360等“安全卫士”</li>
-                <li>熟练重装系统</li>
-                <li>喜欢玩的游戏CF(十年老兵👨)、CFM(枪神🤏)、<br>王者荣耀(最高段位77✨)、原神(🤭)、<br>QQ飞车、永劫无间、泰拉瑞亚</li>
-                <li>cpdd♥❤🧡💛💚💙💜🤎🖤🤍❣💕💞💓💗💖💘💝💟💌</li>
-            
+                <li>熟练彻底卸载360等“安全卫士”、熟练重装系统</li>
+                <li>喜欢玩的游戏CF(十年老兵有👨)、CFM(枪神🤏)、王者荣耀(最高段位77★✨)、原神(🤭)、QQ飞车、永劫无间、泰拉瑞亚、cpdd♥❤🧡💛💗💖💘💝💟💌</li>
             </ul>
         </section>
     </div>
+    
+    <footer>
+        <div class="contact-info">
+            <a href="https://yw-77.github.io/yw77/" target="_blank" style="--hover-color:#171515 ;"><i class="fab fa-github"></i></a>
+            <a href="./images/2.jpg" target="_blank" style="--hover-color:#07c160;" ><i class="fab fa-weixin"></i></a>
+            <a href="https://x.com/bear_yuwei" target="_blank" style="--hover-color:#000000;"><i class="fab fa-x-twitter"></i></a>
+            <a href="https://space.bilibili.com" target="_blank" style="--hover-color:#00AEEC;"><i class="fab fa-bilibili"></i></a>
+            <a href="https://www.zhihu.com" target="_blank" style="--hover-color:#1a94da;"><i class="fab fa-zhihu"></i></a>
+            <a href="https://www.linkedin.com" target="_blank" style="--hover-color:#0077B5;"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.facebook.com" target="_blank" style="--hover-color:#1877f2;"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com" target="_blank" style="--hover-color:#e4405f;"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com" target="_blank" style="--hover-color: #ff0000;"><i class="fab fa-youtube"></i></a>
+            <a href="https://weibo.com" target="_blank" style="--hover-color: #e6162d;"><i class="fab fa-weibo"></i></a> 
+        </div>
+        <p>&copy; 2025 小帅简历. 保留所有权利。</p>
+        <p><a href="#">隐私政策</a> | <a href="#">服务条款</a></p>
+    </footer>
 </body>
 </html>
