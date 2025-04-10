@@ -6,20 +6,20 @@
     <title>我的个人主页</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ccccd6;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh; /* 使内容在垂直方向居中 */
-            background-image: url('./images/wallhaven-85w3jk.png'); /* 替换为你的图片路径 */
-            background-repeat: no-repeat; /* 不平铺 */
-       /* background-size: contain; 缩放以包含 */
-            background-position: center center;  /*居中显示 */
+         body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4; /* 备用颜色 */
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-image: url('D:/Desktop/wallhaven-wqv2qx.jpg'); /* 替换为你的图片路径 */
+        background-repeat: no-repeat; /* 不平铺 */
+        background-size: contain; /*  缩放以包含 */
+        background-position: center center;  /*居中显示 */
         }
         .profile-card {
             background-color: #fff;
@@ -55,19 +55,51 @@
         .contact-info a:hover {
             color: #007bff; /* 鼠标悬停效果 */
         }
+        .skills {
+        margin-top: 30px;
+        text-align: left; /* 让技能列表文字左对齐 */
+        }
+
+        .skills h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+        text-align: center; /* 技能标题居中 */
+        }
+
+        .skills ul {
+        list-style: disc; /* 使用实心圆点作为列表符号 */
+        padding-left: 20px;
+        }
+
+        .skills li {
+        margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
     <div class="profile-card">
-        <img src="./images/1.jpg" alt="我的照片" class="profile-image">
+        <img src="D:\Desktop\1.jpg" alt="我的照片" class="profile-image">
         <h1 class="name">Apple</h1>
-        <p class="bio">人终将被年少不可得之物困其一生</p>
+        <p class="bio">前进！前进！前进进！！</p>
+        <p class="bio">毕业于中国皇家理工大学计算机系</p>
 
         <div class="contact-info">
             <a href="https://yw-77.github.io/yw77/" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="./images/2.jpg" target="_blank"><i class="fab fa-weixin"></i></a>
+            <a href="D:\Desktop\2.jpg" target="_blank"><i class="fab fa-weixin"></i></a>
             <a href="https://x.com/bear_yuwei" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
+<section class="skills">
+            <h2>技能</h2>
+            <ul>
+                <li>精通Java、C++、C#、Python语言<br>掌握spring、spring boot、mybatis使用<br>了解vue、node.js、.NET<br>熟练掌握office使用，精通vlookup函数</li>
+                <li>擅长网络安全、网络配置、软路由、vpn等技术</li>
+                <li>掌握linux、shell脚本、apache、nginx、<br>tomcat等系统运维、网络运维</li>
+                <li>掌握MySQL、Access、Navicat等数据库及管理工具</li>
+                <li>精通剪映、Pr、Ps、Au等工具</li>
+                <li>精通AI工具的使用，包括但不限于Chat Gpt、deep seek等</li>
+                <li>爱好书法、羽毛球、喜欢瞎倒腾东西</li>
+            </ul>
+        </section>
     </div>
 </body>
 </html>
